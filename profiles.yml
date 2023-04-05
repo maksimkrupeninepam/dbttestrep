@@ -1,0 +1,16 @@
+dbttestrep:
+  target: default
+  outputs:
+    default:
+      type: snowflake
+      account: cai.us-east-1
+
+      # User/password auth
+      user: svc_ede_dbt@coxautoinc.com
+      password: "{{ env_var('DB_PASSWORD') }}"
+
+      role: SNOWFLAKE_CADS_ARCHITECTURE_CREATORS
+      database: CADS_ARCHITECTURE
+      warehouse: WHS_CADS_ARCHITECTURE
+      schema: MK_DEV
+      threads: 4
