@@ -19,3 +19,4 @@ jobs:
         DB_PASSWORD: ${{ secrets.SuperSecret }}
       with:
         args: run --files ${{ steps.file_changes.outputs.files}}
+
